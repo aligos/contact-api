@@ -40,6 +40,12 @@ router.put('/', (req, res) => {
 
     user.name = req.body.name;
     user.location = req.body.location;
+    user.username = req.body.username;
+    user.gender = req.body.gender;
+    user.title = req.body.title;
+    user.phone = req.body.phone;
+    user.email = req.body.email;
+    user.company = req.body.company;
     user.save(() => {
       res.end();
     });

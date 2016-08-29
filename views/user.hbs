@@ -70,6 +70,10 @@
     <dd class="view">{{user.username}}</dd>
     <dd class="edit"><input id="username" type="text" value="{{user.username}}"></dd>
     <br>
+    <dt>Gender</dt>
+    <dd class="view">{{user.gender}}</dd>
+    <dd class="edit"><input id="gender" type="text" value="{{user.gender}}"></dd>
+    <br>
     <dt>Title</dt>
     <dd class="view">{{user.title}}</dd>
     <dd class="edit"><input id="title" type="text" value="{{user.title}}"></dd>
@@ -129,6 +133,12 @@
             first: $('#first').val(),
             last: $('#last').val()
           },
+          username: $('#username').val(),
+          gender: $('#gender').val(),
+          title: $('#title').val(),
+          email: $('#email').val(),
+          phone: $('#phone').val(),
+          company: $('#company').val(),
           location: {
             street: $('#street').val(),
             city: $('#city').val(),

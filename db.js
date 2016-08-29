@@ -16,6 +16,7 @@ db.once('open', function (callback) {
 const userSchema = mongoose.Schema({
   username: String,
   title: String,
+  gender: String,
   name: {
     first: String,
     last: String

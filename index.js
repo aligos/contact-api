@@ -33,11 +33,12 @@ app.post('/adduser', (req, res) => {
   name = req.body.name;
   location = req.body.location;
   username = req.body.username;
+  gender = req.body.gender;
   title = req.body.title;
   phone = req.body.phone;
   email = req.body.email;
   company = req.body.company;
-  let newUser = new User({username: username, name: name, location: location, title: title, phone: phone, email: email, company: company});
+  let newUser = new User({username: username, gender: gender, name: name, location: location, title: title, phone: phone, email: email, company: company});
   newUser.save();
   res.redirect('/');
 });
