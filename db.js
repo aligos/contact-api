@@ -15,9 +15,8 @@ db.once('open', function (callback) {
 
 const userSchema = mongoose.Schema({
   username: String,
-  gender: String,
+  title: String,
   name: {
-    title: String,
     first: String,
     last: String
   },
@@ -27,11 +26,9 @@ const userSchema = mongoose.Schema({
     state: String,
     zip: Number
   },
-  picture: {
-    large: String,
-    medium: String,
-    thumbnail: String
-  }
+  email: String,
+  phone: String,
+  company: String
 });
 
 userSchema.virtual('name.full').get(function () {

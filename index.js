@@ -32,13 +32,19 @@ app.get('/adduser', (req, res) => {
 app.post('/adduser', (req, res) => {
   name = req.body.name;
   location = req.body.location;
-  let newUser = new User({name: name, location: location});
-  newUser.save(); 
+  username = req.body.username;
+  title = req.body.title;
+  phone = req.body.phone;
+  email = req.body.email;
+  company = req.body.company;
+  let newUser = new User({username: username, name: name, location: location, title: title, phone: phone, email: email, company: company});
+  newUser.save();
+  res.redirect('/');
 });
 
 
 app.use('/:username', userRouter);
 
 const server = app.listen(3000, () => {
-  console.log('Server running at http://localhost:' + server.address().port);
+  console.log(`Server running at http://localhost:${server.address().port}`);
 });

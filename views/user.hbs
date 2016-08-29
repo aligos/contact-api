@@ -22,7 +22,7 @@
   div.nav {
     float: left;
     width: 100%;
-    height: 100px;
+    height: 40px;
   }
 
   img {
@@ -41,7 +41,6 @@
 
   dd {
     display: inline-block;
-    margin-left: 0;
     line-height: 1.5;
   }
 
@@ -57,19 +56,35 @@
     <a href="/">Back to Users List</a>
   </div>
 
-  <div class="pic">
-    <img src="{{user.picture.large}}">
-    <p>
+  <h1>{{user.name.full}}</h1>
+  <p>
       <a href="#" onclick="edit()">Edit</a>
       <a href="#" onclick="del()">Delete</a>
-    </p>
-  </div>
-
-  <h1>{{user.name.full}}</h1>
+  </p>
   <dl>
     <dt>Name</dt>
     <dd class="view">{{user.name.full}}</dd>
     <dd class="edit"><input id="first" type="text" value="{{user.name.first}}"><input id="last" type="text" value="{{user.name.last}}"></dd>
+    <br>
+    <dt>Username</dt>
+    <dd class="view">{{user.username}}</dd>
+    <dd class="edit"><input id="username" type="text" value="{{user.username}}"></dd>
+    <br>
+    <dt>Title</dt>
+    <dd class="view">{{user.title}}</dd>
+    <dd class="edit"><input id="title" type="text" value="{{user.title}}"></dd>
+    <br>
+    <dt>Email</dt>
+    <dd class="view">{{user.email}}</dd>
+    <dd class="edit"><input id="email" type="email" value="{{user.email}}"></dd>
+    <br>
+    <dt>Phone</dt>
+    <dd class="view">{{user.phone}}</dd>
+    <dd class="edit"><input id="phone" type="text" value="{{user.phone}}"></dd>
+    <br>
+    <dt>Company</dt>
+    <dd class="view">{{user.company}}</dd>
+    <dd class="edit"><input id="company" type="text" value="{{user.company}}"></dd>
     <br>
     <dt>Street</dt>
     <dd class="view">{{address.street}}</dd>
